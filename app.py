@@ -20,7 +20,7 @@ from sklearn.preprocessing import FunctionTransformer
 from sklearn.pipeline import Pipeline
 import io
 
-st.title("## Customers Segmentation")
+st.title("Customers Segmentation")
 
 products_df = pd.read_csv('Products_with_Categories.csv')
 transactions_df = pd.read_csv('Transactions.csv')
@@ -84,9 +84,19 @@ rfm_df.to_csv(output_file, index=True, encoding='utf-8')
 menu = ["Overview", "Build Project", "Manual RFM","Kmeans_RFM","Kmeans_RFM_bigdata","Hireachical_clustering","Tra cứu nhóm khách hàng"]
 choice = st.sidebar.selectbox('Menu', menu)
 if choice == 'Overview':    
-    st.subheader("Overview")
+    st.subheader("Giới thiệu project")
     st.write("""
-    #### ...
+    Dự án này được thiết kế nhằm hỗ trợ **chủ cửa hàng X** quản lý và phân tích dữ liệu khách hàng một cách hiệu quả, từ đó tối ưu hóa chiến lược kinh doanh. Dưới đây là những nôi dung của dự án:
+
+    1. **Giới thiệu dự án**:  
+       Ứng dụng được xây dựng dành riêng cho **chủ cửa hàng X**, giúp phân tích hành vi khách hàng dựa trên dữ liệu giao dịch và tương tác. Mục tiêu là cung cấp một công cụ trực quan, dễ sử dụng để hỗ trợ việc ra quyết định kinh doanh.
+
+    2. **Kết quả đạt được**:  
+       Dự án đã thành công trong việc **xác định các phân nhóm khách hàng** dựa trên các đặc điểm như thói quen mua sắm, sở thích, và mức độ chi tiêu. Các phân nhóm này giúp chủ cửa hàng hiểu rõ hơn về đối tượng khách hàng và xây dựng chiến lược tiếp cận phù hợp.
+
+    3. **Lợi ích cho người dùng**:  
+       Với giao diện thân thiện và các công cụ phân tích tích hợp, người dùng có thể **dễ dàng xác định khách hàng tiềm năng**, từ đó cá nhân hóa các chiến dịch tiếp thị và nâng cao hiệu quả kinh doanh.
+    
     """)  
 
 elif choice == 'Build Project':
